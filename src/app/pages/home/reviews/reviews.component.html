@@ -1,0 +1,40 @@
+<section class="2xl:px-20 lg:px-16 md:px-10 px-4 my-24" id="reviews">
+    <div class="container">
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-6xl font-semibold leading-[72px] text-black/85">
+                Don't Trust Us, Trust Their Voice
+            </h2>
+            <p class="text-xl max-w-3xl mt-4 text-center text-black/70">
+                Discover heartfelt of joy and fullfilment as our valued clients on the quest for their dream and prime investments
+            </p>
+        </div>
+        
+        <div class="mt-20 grid grid-cols-5 gap-x-6 gap-y-14">
+            <div 
+                *ngFor="let review of reviews; let i=index" 
+                [ngClass]="{
+                    'bg-white/50 p-6 rounded-2xl': true,
+                    'col-span-3': i === 0 || i === 3,
+                    'col-span-2': i === 1 || i === 2,
+                  }"
+            >
+            <div class="h-full flex flex-col justify-between gap-6">
+                <div>
+                    <img [src]="review.img"  [alt]="review.reviewer" class="h-20 w-20 rounded-full object-cover -mt-16 ml-10"/>
+                    <p class="text-xl mt-4 text-black/60">{{review.comment}}</p>
+                </div>
+                <div>
+                    <h2 class="text-lg font-semibold">{{review.reviewer}}</h2>
+                    <div class="flex gap-1 mt-1.5">
+                        <ng-container *ngFor="let star of getStars(review.numReview)">
+                            <ng-icon *ngIf="star === 'full'" name="heroStarSolid" class="text-yellow-500"></ng-icon>
+                            <ng-icon *ngIf="star === 'half'" name="heroStar" class="text-yellow-500"></ng-icon>
+                            <ng-icon *ngIf="star === 'empty'" name="heroStar" class="text-yellow-500"></ng-icon>
+                          </ng-container>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>

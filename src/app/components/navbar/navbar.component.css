@@ -1,0 +1,6 @@
+.cm-nav ul li a {
+  cursor: pointer;
+}
+.active {
+  color: rgb(255, 61, 61);
+}

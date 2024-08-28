@@ -1,0 +1,39 @@
+p {
+  font-size: 12px;
+}
+
+.row-wrap {
+  text-align: center;
+  float: left;
+  margin: 0 10px;
+}
+
+.row-middle {
+  font-size: 30px;
+  color: #0e76fe;
+  font-weight: 700;
+}
+.row-middle-two {
+  font-size: 17px;
+  color: #808490;
+}
+.row-middle-three {
+  font-size: 14px;
+  color: #9da2ae;
+}
+.row-bottom-small {
+  font-size: 10px;
+  color: #b9c0cd;
+}
+.row-top-small {
+  font-size: 10px;
+  color: #b9c0cd;
+}
+.row-bottom {
+  color: #a3a9b5;
+  font-size: 12px;
+}
+.row-top {
+  color: #a3a9b5;
+  font-size: 12px;
+}

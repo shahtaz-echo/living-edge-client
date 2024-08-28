@@ -1,0 +1,92 @@
+<section class="2xl:px-20 lg:px-16 md:px-10 px-2" id="home">
+    <div class="hero-container text-center">
+      <div class="center relative z-10">
+        <h2 class="text-6xl font-semibold text-white">Journey to your Perfect Home</h2>
+        <p class="text-xl mt-5 text-white/85 max-w-5xl mx-auto">
+          Welcome to the Living Edge, we helps you find your perfect home and acquire it. We provide full support of porpety aquirement with government regulated procedure.
+        </p>
+  
+        <div class="mt-32 max-w-[920px] w-full">
+          <div class="flex p-2 bg-white w-fit rounded-t-xl">
+            <button
+              class="w-20 py-1 rounded-lg"
+              [ngClass]="{ 'btn-active': activeTab === 'buy' }"
+              (click)="setActiveTab('buy')"
+            >
+              Buy
+            </button>
+            <button
+              class="w-20 py-1 rounded-lg"
+              [ngClass]="{ 'btn-active': activeTab === 'rent' }"
+              (click)="setActiveTab('rent')"
+            >
+              Rent
+            </button>
+            <button
+              class="w-20 py-1 rounded-lg"
+              [ngClass]="{ 'btn-active': activeTab === 'sell' }"
+              (click)="setActiveTab('sell')"
+            >
+              Sell
+            </button>
+          </div>
+          <div class="flex gap-6 bg-white rounded-xl rounded-tl-none px-5 py-6">
+            <div class="max-w-[240px] w-full flex flex-col items-start border-r pr-4">
+              <h2 class="pl-1 font-semibold">Property Type</h2>
+              <select
+                class="outline-none w-full text-black/50"
+                [(ngModel)]="propertyType"
+              >
+                <option *ngFor="let type of propertyTypes" [value]="type">
+                  {{ type }}
+                </option>
+              </select>
+            </div>
+  
+            <div class="max-w-[240px] w-full flex flex-col items-start border-r pr-4">
+              <h2 class="pl-1 font-semibold">Location</h2>
+              <select
+                class="outline-none w-full text-black/50"
+                [(ngModel)]="location"
+              >
+                <option *ngFor="let loc of locations" [value]="loc">
+                  {{ loc }}
+                </option>
+              </select>
+            </div>
+  
+            <div class="fl gap-6 w-full">
+              <div class="max-w-[240px] w-full flex flex-col items-start pr-4">
+                <h2 class="pl-1 font-semibold">Price Range</h2>
+                <select
+                  class="outline-none w-full text-black/50"
+                  [(ngModel)]="priceRange"
+                >
+                  <option *ngFor="let price of priceRanges" [value]="price">
+                    {{ price }}
+                  </option>
+                </select>
+              </div>
+              <button
+                class="py-3 px-6 rounded-lg bg-black text-sm font-medium text-white"
+                (click)="search()"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 fl gap-3">
+          <h2 class="font-semibold text-white text-lg mr-6">Popular Search</h2>
+          <button
+            *ngFor="let search of popularSearches"
+            class="bg-white/80 text-sm font-medium text-black rounded-md py-1 px-3"
+            (click)="setSearch(search)"
+          >
+            {{ search }}
+          </button>
+        </div>
+      </div>
+    </div>
+</section>
+  

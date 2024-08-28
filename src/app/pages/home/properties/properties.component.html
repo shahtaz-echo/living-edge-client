@@ -1,0 +1,56 @@
+<section class="2xl:px-20 lg:px-16 md:px-10 px-4 my-24" id="properties">
+    <div class="container">
+        <div class="flex flex-wrap gap-10 justify-between">
+            <h2 class="text-6xl font-semibold max-w-2xl leading-[72px] text-black/85">
+                Discover your Perfect Property Match
+            </h2>
+            <p class="text-xl max-w-xl mt-4 text-black/70">
+                A cutting-edge real estate agent that offers you personalized recommendations: Tailored property suggestions based on your preferences and lifestyle.
+            </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Main Property -->
+            <div class="h-[90vh]">
+                <div class="h-full overflow-hidden rounded-2xl group relative">
+                    <div class="bg-white h-12 w-12 p-3 rounded-full absolute top-6 right-6 z-10">
+                        <img src="/assets/images/heart.png" class="h-full w-full" />
+                    </div>
+                    <img [src]="firstProperty.img" alt="Property Image" class="h-full w-full object-cover tr group-hover:scale-[1.03]" />
+                    <div class="p-8 bg-black/80 text-white rounded-xl tr group-hover:-translate-y-56 mx-4 mt-4">
+                        <h2 class="text-5xl font-semibold">${{firstProperty.price}}</h2>
+                        <p class="mt-6 text-xl max-w-[280px]">{{firstProperty.address}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smaller Properties -->
+            <div class="flex flex-col gap-6 h-[90vh]">
+                <div class="h-1/2">
+                    <div class="h-full overflow-hidden rounded-2xl group relative">
+                        <div class="bg-white h-12 w-12 p-3 rounded-full absolute top-6 right-6 z-10">
+                            <img src="/assets/images/heart.png" class="h-full w-full" />
+                        </div>
+                        <img [src]="secondProperty.img" alt="Property Image" class="h-full w-full object-cover tr group-hover:scale-[1.03]" />
+                        <div class="p-6 bg-black/80 text-white rounded-xl tr group-hover:-translate-y-48 mx-4 mt-4">
+                            <h2 class="text-3xl font-semibold">${{secondProperty.price}}</h2>
+                            <p class="mt-6 text-lg max-w-[280px]">{{secondProperty.address}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-1/2 grid grid-cols-2 gap-6">
+                    <div *ngFor="let property of restProperties" class="h-full overflow-hidden rounded-2xl group relative">
+                        <div class="bg-white h-12 w-12 p-3 rounded-full absolute top-6 right-6 z-10">
+                            <img src="/assets/images/heart.png" class="h-full w-full" />
+                        </div>
+                        <img [src]="property.img" alt="Property Image" class="h-full w-full object-cover tr group-hover:scale-[1.03]" />
+                        <div class="absolute -bottom-40 left-3 right-3 w-fill p-5 bg-black/80 text-white rounded-2xl tr group-hover:-translate-y-[172px]">
+                            <h2 class="text-2xl font-semibold">${{property.price}}</h2>
+                            <p class="mt-4 text-sm">{{property.address}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
