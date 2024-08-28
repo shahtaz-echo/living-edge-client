@@ -1,5 +1,5 @@
 {
-  "name": "cmlanding-client",
+  "name": "living-edge-client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:cmlanding-client": "node dist/cmlanding-client/server/server.mjs"
+    "serve:ssr:living-edge-client": "node dist/living-edge-client/server/server.mjs"
   },
   "private": true,
   "dependencies": {

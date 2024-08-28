@@ -45,9 +45,25 @@
             <p class="text-xl text-black/65">
               We have witnessed the ever-evolving landscape of the real estate market and have become trusted partners to thousands of clients.
             </p>
-            <a routerLink="/contact-us" class="cursor-pointer h-24 w-24 bg-orange-500/50 bg-opacity-75 hover:bg-opacity-100 tr rounded-full flex items-center justify-center">
-              <ng-icon name="heroArrowUpRight" class="text-white text-4xl"></ng-icon>
-          </a>
+            <a routerLink="/contact-us" class="cursor-pointer">
+              <div id="container" class="pt-5">
+                <div id="circle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                    <defs>
+                        <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                    </defs>
+                   <circle cx="150" cy="100" r="75" fill="none"/>
+                    <g>
+                        <use xlink:href="#circlePath" fill="none"/>
+                        <text fill="#000">
+                            <textPath xlink:href="#circlePath">C O N T A C T &nbsp; U S &nbsp; ~ &nbsp; C O N T A C T &nbsp; U S &nbsp; ~ &nbsp;</textPath>
+                        </text>
+                    </g>
+                </svg>
+              </div>
+              <ng-icon name="heroArrowUpRight" class="text-orange-400 text-4xl mt-5 ml-12"></ng-icon>
+              </div>
+            </a>
           </div>
           <div>
             <img src="/assets/images/prop1.jpg" alt="Property Image" class="h-full w-full object-cover rounded-xl" />

@@ -1,5 +1,9 @@
 .cm-nav ul li a {
   cursor: pointer;
+  transition: 0.3s;
+}
+.cm-nav ul li a:not(.active):hover {
+  color: rgb(255, 123, 123);
 }
 .active {
   color: rgb(255, 61, 61);

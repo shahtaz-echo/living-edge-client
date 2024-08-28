@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cmlanding-client": {
+    "living-edge-client": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/cmlanding-client",
+            "outputPath": "dist/living-edge-client",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "cmlanding-client:build:production"
+              "buildTarget": "living-edge-client:build:production"
             },
             "development": {
-              "buildTarget": "cmlanding-client:build:development"
+              "buildTarget": "living-edge-client:build:development"
             }
           },
           "defaultConfiguration": "development"
